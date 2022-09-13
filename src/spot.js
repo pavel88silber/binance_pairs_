@@ -5,8 +5,8 @@ const modules = require('./modules')
 const { flowRight } = require('./helpers/utils')
 
 class Spot extends flowRight(...Object.values(modules))(APIBase) {
-  constructor (apiKey = '', apiSecret = '', options = {}) {
-    options.baseURL = options.baseURL || 'https://api.binance.com'
+  constructor(apiKey = '', apiSecret = '', options = {}) {
+    options.baseURL = options.baseURL || 'https://api.binance.com' || 'https://api1.binance.com'
     super({
       apiKey,
       apiSecret,
